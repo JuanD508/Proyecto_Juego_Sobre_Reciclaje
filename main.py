@@ -17,42 +17,60 @@ clock = pygame.time.Clock()
 running = True
 mode = 'menu'
 
-menu_image = pygame.transform.scale(pygame.image.load('Imagenes/Menu.png'),
-                                    (150, 40))
-options_image = pygame.transform.scale(pygame.image.load('Imagenes/Options.png'),
-                                       (150, 40))
-play_image = pygame.transform.scale(pygame.image.load('Imagenes/Play.png'),
-                                    (150, 40))
-game1_image = pygame.transform.scale(pygame.image.load('Imagenes/Game1.png'),
-                                     (150, 80))
-game2_image = pygame.transform.scale(pygame.image.load('Imagenes/Game2.png'),
-                                     (150, 80))
-lern_image = pygame.transform.scale(pygame.image.load('Imagenes/Lern.png'),
-                                    (150, 80))
-controls_image = pygame.transform.scale(pygame.image.load('Imagenes/Controls.png'),
-                                        (150, 80))
-canecaV_image = pygame.transform.scale(pygame.image.load('Imagenes/CanecaV.png'),
-                                       (200, 400))
-canecaB_image = pygame.transform.scale(pygame.image.load('Imagenes/CanecaB.png'),
-                                       (200, 400))
-canecaN_image = pygame.transform.scale(pygame.image.load('Imagenes/CanecaN.png'),
-                                       (220, 400))
-BasuraN_image = pygame.transform.scale(pygame.image.load('Imagenes/BasuraN.png'),
-                                       (127, 227))
-BasuraB_image = pygame.transform.scale(pygame.image.load('Imagenes/BasuraB.png'),
-                                       (120, 237))
-BasuraV_image = pygame.transform.scale(pygame.image.load('Imagenes/BasuraV.png'),
-                                       (116, 246))
-notaN_image = pygame.transform.scale(pygame.image.load('Imagenes/NotaN.png'),
-                                     (300, 300))
-notaB_image = pygame.transform.scale(pygame.image.load('Imagenes/NotaB.png'),
-                                     (300, 300))
-notaV_image = pygame.transform.scale(pygame.image.load('Imagenes/NotaV.png'),
-                                     (300, 300))
-replay1_image = pygame.transform.scale(pygame.image.load('Imagenes/Replay1.png'),
-                                       (150, 80))
-replay2_image = pygame.transform.scale(pygame.image.load('Imagenes/Replay2.png'),
-                                       (150, 80))
+menu_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/Menu.png'), (150, 40)
+)
+options_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/Options.png'), (150, 40)
+)
+play_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/Play.png'), (150, 40)
+)
+game1_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/Game1.png'), (150, 80)
+)
+game2_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/Game2.png'), (150, 80)
+)
+lern_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/Lern.png'), (150, 80)
+)
+controls_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/Controls.png'), (150, 80)
+)
+canecaV_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/CanecaV.png'), (200, 400)
+)
+canecaB_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/CanecaB.png'), (200, 400)
+)
+canecaN_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/CanecaN.png'), (220, 400)
+)
+BasuraN_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/BasuraN.png'), (127, 227)
+)
+BasuraB_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/BasuraB.png'), (120, 237)
+)
+BasuraV_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/BasuraV.png'), (116, 246)
+)
+notaN_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/NotaN.png'), (300, 300)
+)
+notaB_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/NotaB.png'), (300, 300)
+)
+notaV_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/NotaV.png'), (300, 300)
+)
+replay1_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/Replay1.png'), (150, 80)
+)
+replay2_image = pygame.transform.scale(
+  pygame.image.load('Imagenes/Replay2.png'),(150, 80)
+)
 
 menu_x, menu_y = WIDTH // 2 - 75, 50
 menu_rect = pygame.Rect(menu_x, menu_y, 150, 40)
@@ -114,13 +132,37 @@ class Basura:
 
 
 def cargar_basuritas_imagenes():
-    basuras_verdes = [pygame.image.load(f'Imagenes/basuritaV{i}.png') for i in range(1, 4) if os.path.exists(f'Imagenes/basuritaV{i}.png')]
-    basuras_blancas = [pygame.image.load(f'Imagenes/basuritaB{i}.png') for i in range(1, 5) if os.path.exists(f'Imagenes/basuritaB{i}.png')]
-    basuras_negras = [pygame.image.load(f'Imagenes/basuritaN{i}.png') for i in range(1, 5) if os.path.exists(f'Imagenes/basuritaN{i}.png')]
+    basuras_verdes = [
+      pygame.image.load(
+        f'Imagenes/basuritaV{i}.png'
+      ) for i in range(1, 4) if os.path.exists(
+        f'Imagenes/basuritaV{i}.png'
+      )
+    ]
+    basuras_blancas = [
+      pygame.image.load(
+        f'Imagenes/basuritaB{i}.png'
+      ) for i in range(1, 5) if os.path.exists(
+        f'Imagenes/basuritaB{i}.png'
+      )
+    ]
+    basuras_negras = [
+      pygame.image.load(
+        f'Imagenes/basuritaN{i}.png'
+      ) for i in range(1, 5) if os.path.exists(
+        f'Imagenes/basuritaN{i}.png'
+      )
+    ]
 
-    basuras_verdes = [pygame.transform.scale(img, (100, 100)) for img in basuras_verdes]
-    basuras_blancas = [pygame.transform.scale(img, (100, 100)) for img in basuras_blancas]
-    basuras_negras = [pygame.transform.scale(img, (100, 100)) for img in basuras_negras]
+    basuras_verdes = [
+      pygame.transform.scale(img, (100, 100)) for img in basuras_verdes
+    ]
+    basuras_blancas = [
+      pygame.transform.scale(img, (100, 100)) for img in basuras_blancas
+    ]
+    basuras_negras = [
+      pygame.transform.scale(img, (100, 100)) for img in basuras_negras
+    ]
 
     return {
         'verde': basuras_verdes,
@@ -294,7 +336,8 @@ with mp_hands.Hands(min_detection_confidence=0.5,
                 for (x, y, dedos_arriba) in dedos_data:
                     if dedos_arriba == 1 and is_finger_over_button(x,
                                                                    y,
-                                                                   replay1_rect):
+                                                                   replay1_rect
+                                                                  ):
                         puntuacion_correctas = 0
                         puntuacion_incorrectas = 0
                         imagenes_basuras = cargar_basuritas_imagenes()
@@ -331,23 +374,29 @@ with mp_hands.Hands(min_detection_confidence=0.5,
                 for (x, y, dedos_arriba) in dedos_data:
                     if dedos_arriba == 1:
                         if canecaN_rect.collidepoint(x, y):
-                            mini = pygame.transform.scale(canecaN_image, 
-                                                          (canecaN_image.get_width()//2,
-                                                           canecaN_image.get_height()//2))
+                            mini = pygame.transform.scale(
+                              canecaN_image, 
+                              (canecaN_image.get_width()//2,
+                               canecaN_image.get_height()//2)
+                            )
                             caneca_elegida = ('negro', mini)
                             game2_etapa = 'explicar'
 
                         elif canecaB_rect.collidepoint(x, y):
-                            mini = pygame.transform.scale(canecaB_image,
-                                                          (canecaB_image.get_width()//2,
-                                                           canecaB_image.get_height()//2))
+                            mini = pygame.transform.scale(
+                              canecaB_image,
+                              (canecaB_image.get_width()//2,
+                               canecaB_image.get_height()//2)
+                            )
                             caneca_elegida = ('blanco', mini)
                             game2_etapa = 'explicar'
 
                         elif canecaV_rect.collidepoint(x, y):
-                            mini = pygame.transform.scale(canecaV_image,
-                                                          (canecaV_image.get_width()//2,
-                                                           canecaV_image.get_height()//2))
+                            mini = pygame.transform.scale(
+                              canecaV_image,
+                              (canecaV_image.get_width()//2,
+                               canecaV_image.get_height()//2)
+                            )
                             caneca_elegida = ('verde', mini)
                             game2_etapa = 'explicar'
 
@@ -377,7 +426,9 @@ with mp_hands.Hands(min_detection_confidence=0.5,
             elif game2_etapa == 'jugando':
                 tipo_caneca, img_caneca = caneca_elegida
 
-                caneca_rect = img_caneca.get_rect(center=(WIDTH // 2, HEIGTH - 120))
+                caneca_rect = img_caneca.get_rect(
+                  center=(WIDTH // 2, HEIGTH - 120)
+                )
 
                 for (x, y, dedos_arriba) in dedos_data:
                     if dedos_arriba == 4:
@@ -422,14 +473,14 @@ with mp_hands.Hands(min_detection_confidence=0.5,
                                  (255, 255, 255))
                 screen.blit(t, (200, HEIGTH // 2 - 30))
                 screen.blit(t2, (200, HEIGTH // 2 + 90))
-
-
+              
                 screen.blit(replay2_image, (replay_x, replay_y))
 
                 for (x, y, dedos_arriba) in dedos_data:
                     if dedos_arriba == 1 and is_finger_over_button(x,
                                                                    y,
-                                                                   replay2_rect):
+                                                                   replay2_rect
+                                                                  ):
                         game2_etapa = 'elegir'
                         caneca_elegida = None
                         game2_basuras = []
@@ -510,3 +561,4 @@ with mp_hands.Hands(min_detection_confidence=0.5,
 cap.release()
 cv2.destroyAllWindows()
 pygame.quit()
+
